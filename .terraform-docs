@@ -1,0 +1,57 @@
+# terraform-docs Configuration File
+#
+# This file (.terraform-docs.yml) is used by default by terraform-docs. It is
+# used to generate the README for this Terraform module.
+#
+# To generate documentation, execute the following:
+#
+#   ```
+#   terraform-docs .
+#   ```
+#
+# See the terraform-docs documentation for more information:
+#   https://github.com/terraform-docs/terraform-docs/tree/master/docs
+
+formatter: markdown
+
+header-from: main.tf
+footer-from: ""
+
+recursive:
+  enabled: true
+  path: modules
+
+sections:
+  hide: []
+  show: []
+
+output:
+  file: "README.md"
+  mode: inject
+  template: |-
+    <!-- BEGIN_TF_DOCS -->
+    {{ .Content }}
+    <!-- END_TF_DOCS -->
+
+output-values:
+  enabled: false
+  from: ""
+
+sort:
+  enabled: true
+  by: name
+
+settings:
+  anchor: true
+  color: true
+  default: true
+  description: false
+  escape: true
+  hide-empty: true
+  html: true
+  indent: 2
+  lockfile: true
+  read-comments: true
+  required: true
+  sensitive: true
+  type: true
