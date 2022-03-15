@@ -52,7 +52,7 @@ resource "aws_s3_object" "dist" {
 # Creates a distributed content delivery network using Amazon CloudFront.
 # -----------------------------------------------------------------------------
 resource "aws_cloudfront_distribution" "this" {
-  default_this_object = "index.html"
+  default_root_object = "index.html"
   enabled             = true
   http_version        = "http2"
   is_ipv6_enabled     = true
