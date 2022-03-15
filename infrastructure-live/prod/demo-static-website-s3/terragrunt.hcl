@@ -12,5 +12,5 @@ include "root" {
 
 # These are the variables we have to pass in to use the module specified in the terragrunt configuration above
 inputs = {
-  base_name = "demo-static-website-s3"
+  base_name = "demo-static-website-s3-prod"
 }
